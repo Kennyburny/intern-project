@@ -19,7 +19,7 @@ if (strlen($_SESSION['id']==0)) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UCU Phone System</title>
+    <title>UCU Phone Systems</title>
 
 
     <!-- Custom fonts for this template-->

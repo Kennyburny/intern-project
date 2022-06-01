@@ -5,15 +5,19 @@ if(isset($_POST['login']))
 {
   $username=$_POST['username'];
   $password=($_POST['password']);
+  $email=$_POST['email'];
+  $office_name=$_POST['office_name'];
+  $phone=$_POST['phone'];
+
   $query=mysqli_query($con,"call sp_userlogin('$username','$password')");
 $num=mysqli_fetch_array($query);
 if($num>0)
 {
 $_SESSION['id']=$num['id'];
 $_SESSION['username']=$num['username'];
-$_SESSION['email']=$num['email'];
-$_SESSION['office_name']=$row['office_name'];
-$_SESSION['phone']=$row['phone'];
+$_SESSION['email']=$row['email'];
+$_SESSION['office_name']=$num['office_name'];
+$_SESSION['phone']=$num['phone'];
 
 
 header("location:welcome.php");
